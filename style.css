@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.encabezado{
+  text-align: center;
+  background: #cce0ff;
+
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #cce0ff;
+}
+
+.wrap > div {
+  flex-basis: 500px;
+  height: 440px;
+  border-radius: 10px;
+}
+
+.calc {
+  margin: 10px 10px 0;
+  background-color: rgb(153,153,153);
+  box-shadow: rgba(0,0,0,.8) 0px 3px 8px -3px;
+  border: 1px solid rgb(153,153,153);
+  overflow: hidden;
+}
+
+.display {
+  height: 90px;
+  color: white;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 15px 10px 15px;
+  font-weight: 300;
+  background: linear-gradient(#777, #555);
+}
+
+p {
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+button {
+  border: none;
+  border-bottom: 1px solid rgb(153,153,153);
+  border-right: 1px solid rgb(153,153,153);
+  width: 25%;
+  height: 70px;
+  background-color: rgb(224,224,224);
+}
+
+.operator {
+  background-color: gray;
+  color: white;
+  border-right: none;
+}
+
+button:active,
+button.clicked {
+  background-color: rgb(178,178,178);
+}
+
+.operator:active,
+.operator.clicked {
+  background-color: rgb(194,115,47);
+}
+
+[data-char='0'],
+[data-char='.'],
+#equal {
+  border-bottom: none;
+}
+
+[data-char='0'] {
+  width: 50%;
+}
+
+.history {
+  background: #cce0ff;
+  margin: 10px;
+  box-shadow:inset rgba(0, 0, 0, 0.1) 0px -3px 8px 0px,
+            inset rgba(252,255,255,.2) 0px 3px 8px,
+            rgba(0,0,0,.8) 0px 3px 8px -3px;
+  padding: 20px;
+  color: #555;
+  overflow: auto;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.history p {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 0;
+  border-bottom: 1px dotted rgb(153,153,153);
+}
+
+.history p:first-child {
+  padding-top: 0;
+}
+
+.clearHistory {
+  padding: 0 5px;
+  width: auto;
+  height: 28px;
+  float: right;
+  color: #777;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+@keyframes decrease {
+  from { transform: scale(1); }
+  to { transform: scale(0); }
+}
+
+.disappear {
+  animation: decrease 3s forwards;
+}
+
+
+.footer{
+  background:  #cce0ff;
+  width: auto;
+  text-align: center;
+
+}
